@@ -1,53 +1,87 @@
 /**
- * Below are the colors that are used in the app. The colors are defined in the light and dark mode.
- * There are many other ways to style your app. For example, [Nativewind](https://www.nativewind.dev/), [Tamagui](https://tamagui.dev/), [unistyles](https://reactnativeunistyles.vercel.app), etc.
+ * Netto Panino Maker — Digital Gastronome Design System
+ * Brand tokens from the Netto-panino Stitch project.
  */
 
-import { Platform } from 'react-native';
-
-const tintColorLight = '#0a7ea4';
-const tintColorDark = '#fff';
+export const BrandColors = {
+  background: '#fefee5', // surface
+  surfaceLow: '#fbfbe0',
+  surfaceLowest: '#ffffff',
+  surfaceHigh: '#eff0d1',
+  surfaceHighest: '#e9eaca',
+  primary: '#736400',
+  primaryContainer: '#fedf00',
+  onPrimary: '#ffffff',
+  onPrimaryContainer: '#5c5000',
+  onSurface: '#373928',
+  secondaryContainer: '#e5e2e1',
+  error: '#be2d06',
+  tertiary: '#456e39',
+  outlineVariant: '#babba4',
+};
 
 export const Colors = {
   light: {
-    text: '#11181C',
-    background: '#fff',
-    tint: tintColorLight,
-    icon: '#687076',
-    tabIconDefault: '#687076',
-    tabIconSelected: tintColorLight,
+    text: BrandColors.onSurface,
+    background: BrandColors.background,
+    tint: BrandColors.primaryContainer,
+    icon: BrandColors.onSurface,
+    tabIconDefault: BrandColors.onSurface,
+    tabIconSelected: BrandColors.primaryContainer,
   },
   dark: {
-    text: '#ECEDEE',
-    background: '#151718',
-    tint: tintColorDark,
-    icon: '#9BA1A6',
-    tabIconDefault: '#9BA1A6',
-    tabIconSelected: tintColorDark,
+    text: BrandColors.surfaceLowest,
+    background: BrandColors.onSurface,
+    tint: BrandColors.primaryContainer,
+    icon: BrandColors.outlineVariant,
+    tabIconDefault: BrandColors.outlineVariant,
+    tabIconSelected: BrandColors.primaryContainer,
   },
 };
 
+/**
+ * Typography font families.
+ * Install: npx expo install @expo-google-fonts/plus-jakarta-sans @expo-google-fonts/be-vietnam-pro
+ * Until installed, React Native falls back to the system font.
+ */
+export const FontFamily = {
+  headlineExtraBold: 'PlusJakartaSans-ExtraBold',
+  headlineBold: 'PlusJakartaSans-Bold',
+  headlineMedium: 'PlusJakartaSans-Medium',
+  bodyRegular: 'BeVietnamPro-Regular',
+  bodySemiBold: 'BeVietnamPro-SemiBold',
+  bodyBold: 'BeVietnamPro-Bold',
+};
+
+export const Spacing = {
+  xs: 4,
+  sm: 8,
+  md: 16,
+  lg: 24,
+  xl: 32,
+  xxl: 48,
+};
+
+/**
+ * Legacy Fonts export — kept for backwards compatibility with explore.tsx.
+ * New screens should use FontFamily instead.
+ */
+import { Platform } from 'react-native';
 export const Fonts = Platform.select({
-  ios: {
-    /** iOS `UIFontDescriptorSystemDesignDefault` */
-    sans: 'system-ui',
-    /** iOS `UIFontDescriptorSystemDesignSerif` */
-    serif: 'ui-serif',
-    /** iOS `UIFontDescriptorSystemDesignRounded` */
-    rounded: 'ui-rounded',
-    /** iOS `UIFontDescriptorSystemDesignMonospaced` */
-    mono: 'ui-monospace',
-  },
-  default: {
-    sans: 'normal',
-    serif: 'serif',
-    rounded: 'normal',
-    mono: 'monospace',
-  },
+  ios: { sans: 'system-ui', serif: 'ui-serif', rounded: 'ui-rounded', mono: 'ui-monospace' },
   web: {
     sans: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
     serif: "Georgia, 'Times New Roman', serif",
-    rounded: "'SF Pro Rounded', 'Hiragino Maru Gothic ProN', Meiryo, 'MS PGothic', sans-serif",
-    mono: "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
+    rounded: "'SF Pro Rounded', sans-serif",
+    mono: "SFMono-Regular, Menlo, Monaco, Consolas, 'Courier New', monospace",
   },
+  default: { sans: 'normal', serif: 'serif', rounded: 'normal', mono: 'monospace' },
 });
+
+export const Radius = {
+  sm: 8,
+  md: 12,
+  lg: 32, // Gourmet card radius
+  xl: 48,
+  pill: 9999, // 'full' corner radius
+};

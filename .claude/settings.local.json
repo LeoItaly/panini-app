@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(copy:*)",
+      "Bash(npx expo:*)",
+      "Bash(./gradlew assembleRelease)",
+      "Bash(adb uninstall:*)",
+      "Bash(adb install:*)"
+    ]
+  }
+}

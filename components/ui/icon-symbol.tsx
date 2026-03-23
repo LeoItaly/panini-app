@@ -18,6 +18,11 @@ const MAPPING = {
   'paperplane.fill': 'send',
   'chevron.left.forwardslash.chevron.right': 'code',
   'chevron.right': 'chevron-right',
+  // Netto Panino Maker tabs
+  'fork.knife': 'restaurant',
+  'archivebox.fill': 'archive',
+  'camera.fill': 'camera-alt',
+  'gearshape.fill': 'settings',
 } as IconMapping;
 
 /**
