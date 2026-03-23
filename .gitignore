@@ -45,3 +45,6 @@ app-example
 
 # local android app
 local-android-app/
+
+# Claude Code local settings
+.claude/

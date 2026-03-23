@@ -2,7 +2,7 @@
   "expo": {
     "name": "Panini App",
     "slug": "panini-app",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "orientation": "portrait",
     "icon": "./assets/images/netto-panino-icon.png",
     "scheme": "panini-app",
@@ -12,7 +12,7 @@
     },
     "android": {
       "package": "com.leuro.paniniapp",
-      "versionCode": 3,
+      "versionCode": 4,
       "adaptiveIcon": {
         "backgroundColor": "#fefee5",
         "foregroundImage": "./assets/images/netto-panino-icon.png"
