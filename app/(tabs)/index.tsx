@@ -38,8 +38,8 @@ const TARGET_STREETS = ['Engelsborgvej', 'Jernbanepladsen'];
 
 // ─── Gemini models (module-level — instantiated once) ────────────────────────
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
-const premiumModel = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
-const liteModel = genAI.getGenerativeModel({ model: 'gemini-2.5-flash-lite' });
+const premiumModel = genAI.getGenerativeModel({ model: 'gemini-3.5-flash' });
+const liteModel = genAI.getGenerativeModel({ model: 'gemini-3.1-flash-lite' });
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 type Stage =
